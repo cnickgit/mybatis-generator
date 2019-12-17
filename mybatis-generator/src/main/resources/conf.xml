@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  <configuration>
+      <environments default="development">
+          <environment id="development">
+              <transactionManager type="JDBC" />
+              <!-- 配置数据库连接信息 -->
+              <dataSource type="POOLED">
+                 <property name="driver" value="com.mysql.jdbc.Driver" />
+                 <property name="url" value="jdbc:mysql://192.168.115.165:8011/fssbss_db?useUnicode=true&characterEncoding=utf8"/>
+                 <property name="username" value="fssbss" />
+                 <property name="password" value="fssbss!123" />
+             </dataSource>
+         </environment>
+     </environments>     
+     
+ </configuration>

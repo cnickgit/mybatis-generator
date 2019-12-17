@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+ <!--  <properties resource="mybatis.properties" />
+      -->
+   <classPathEntry location="D:\devloperTools\repo\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar" />   
+  <context id="msqlTables" targetRuntime="MyBatis3">    
+  <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>   
+    <jdbcConnection connectionURL="jdbc:mysql://192.168.115.165:8011/fssbss_db?useUnicode=true&amp;characterEncoding=utf8" 
+    driverClass="com.mysql.jdbc.Driver" password="fssbss!123" userId="fssbss" >
+    <property name="nullCatalogMeansCurrent" value="true"/>
+    </jdbcConnection>
+    <javaTypeResolver>    
+            <property name="forceBigDecimals" value="false" />    
+        </javaTypeResolver>    
+    <javaModelGenerator targetPackage="com.nick.entity" targetProject="demo\src\main\java">    
+            <property name="enableSubPackages" value="true"/>    
+            <!-- 从数据库返回的值被清理前后的空格  -->    
+            <property name="trimStrings" value="true" />    
+        </javaModelGenerator>    
+     <sqlMapGenerator targetPackage="mapping" targetProject="demo\src\main\resources">    
+            <property name="enableSubPackages" value="true"/>    
+        </sqlMapGenerator>    
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.nick.dao" targetProject="demo\src\main\java">    
+            <property name="enableSubPackages" value="true"/>    
+    </javaClientGenerator>  
+
+          <!--数据库表-->
+          <table tableName="sb_msg_push_fail" domainObjectName="SbMsgPushFail"   
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"  
+               enableSelectByExample="false" selectByExampleQueryId="false" >    
+            <property name="useActualColumnNames" value="false"/>    
+          </table>   
+           <table tableName="sb_msg_push_log" domainObjectName="SbMsgPushLog"   
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"  
+               enableSelectByExample="false" selectByExampleQueryId="false" >    
+            <property name="useActualColumnNames" value="false"/>    
+          </table>  
+  </context>
+</generatorConfiguration>
